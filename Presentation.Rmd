@@ -1,0 +1,23 @@
+---
+title: "Plotly"
+author: Els
+date: 20-12-2017
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+setwd("~/Coursera Data Science/M09/W3")
+library(plotly)
+```
+
+## Introduction
+This presentation shows a plot created with Plotly.
+
+## Plot
+From the mtcars dataset, a plot of disp and hp is created.
+```{r, warning=FALSE, message=FALSE}
+data(mtcars)
+data<-mtcars
+plot_ly(data=mtcars, x= ~hp, y= ~disp, color=~cyl)
+```
